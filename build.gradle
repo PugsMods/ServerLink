@@ -16,10 +16,15 @@ repositories {
         name = 'spigotmc-repo'
         url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
     }
+    maven {
+        name = 'm2-dv8tion'
+        url = 'https://m2.dv8tion.net/releases'
+    }
 }
 
 dependencies {
     compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
+    implementation("net.dv8tion:JDA:4.2.1_253")
 }
 
 processResources {
