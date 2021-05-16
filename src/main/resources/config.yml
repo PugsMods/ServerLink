@@ -1,0 +1,7 @@
+#Enter your Bot token here!
+TOKEN: NO_TOKEN
+#Channel in which messages will be sent in
+CHANNEL: NO_CHANNEL
+#Post messages in the discord chat into the server
+DO_TWO_WAY_CHAT: false
+#More to come in config lol

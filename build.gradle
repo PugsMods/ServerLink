@@ -2,7 +2,9 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     id 'java'
+    id "com.github.johnrengelman.shadow" version "7.0.0"
 }
+apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'com.putopug'
 version = '1.0.0'
@@ -21,14 +23,17 @@ repositories {
         url = 'https://m2.dv8tion.net/releases'
     }
 }
+configurations {
+    shade
+}
+
 
 dependencies {
     compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
-    implementation("net.dv8tion:JDA:4.2.1_253")
+    implementation( "net.dv8tion:JDA:4.2.1_253")
+    shade ( "net.dv8tion:JDA:4.2.1_253")
 }
-
-processResources {
-    from(sourceSets.main.resources.srcDirs) {
-        filter ReplaceTokens, tokens: [version: version]
-    }
+shadowJar {
+    classifier = ''
+    configurations = [project.configurations.shade]
 }
