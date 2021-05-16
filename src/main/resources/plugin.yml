@@ -1,0 +1,8 @@
+name: ServerLink
+version: 1.0.0
+main: com.putopug.serverlink.ServerLink
+api-version: 1.16
+prefix: ServerLink
+authors: [ PugzAreCute_ ]
+description: Link your minecraft server's chat with your discord server
+website: https://www.mcmoddev.tk/
