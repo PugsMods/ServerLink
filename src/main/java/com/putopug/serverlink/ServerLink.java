@@ -10,7 +10,7 @@ public final class ServerLink extends JavaPlugin {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
-        getServer().getPluginManager().registerEvents(new ServerLinkEvents(), this);
+        getServer().getPluginManager().registerEvents(new ServerLinkEvents(this), this);
         try {
             JDABot.init();
         } catch (LoginException | InterruptedException e) {
