@@ -2,8 +2,9 @@
 TOKEN: "TOKEN"
 #Channel in which messages will be sent in
 CHANNEL: "CHANNEL"
+#How to find the channel, 2 options are available - id, string, in id mode, you put the channels id in the CHANNEL field, in string mode, you put the channel name, with exact capitalization and without the #
 CHANNEL-FIND-MODE: "string"
-#Post messages in the discord chat into the server
+#Post messages in the discord chat into the minecraft server
 DO_TWO_WAY_CHAT: false
-#More to come in config lol
+#Custom Message Formatting!
 FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
