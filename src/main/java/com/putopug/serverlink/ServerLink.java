@@ -17,14 +17,24 @@ public final class ServerLink extends JavaPlugin {
         } catch (LoginException | InterruptedException e) {
             Bukkit.getLogger().severe("[ServerLink] JDA failed to login, did you put the correct token?");
         }
-        if(this.getConfig().getBoolean("POST-SERVER-STARTUP-MESSAGE")){
-            JDABot.smg("Server started");
+        if (this.getConfig().getBoolean("POST-SERVER-STARTUP-MESSAGE")) {
+            if (this.getConfig().getString("STARTUP-FORMATTING") != null) {
+                JDABot.smg(this.getConfig().getString("STARTUP-FORMATTING"));
+            } else {
+                Bukkit.getLogger().warning("[ServerLink] WARNING: STARTUP-FORMATTING Key in null, Falling back to default hardcoded Message");
+                JDABot.smg("**Server started.**");
+            }
         }
     }
     @Override
     public void onDisable() {
-        if(this.getConfig().getBoolean("POST-SERVER-SHUTDOWN-MESSAGE")){
-            JDABot.smg("Shutting down server.");
+        if (this.getConfig().getBoolean("POST-SERVER-SHUTDOWN-MESSAGE")) {
+            if (this.getConfig().getString("SHUTDOWN-FORMATTING") != null) {
+                JDABot.smg(this.getConfig().getString("SHUTDOWN-FORMATTING"));
+            } else {
+                Bukkit.getLogger().warning("[ServerLink] WARNING: SHUTDOWN-FORMATTING Key in null, Falling back to default hardcoded Message");
+                JDABot.smg("**Shutting down server.**");
+            }
         }
     }
 }

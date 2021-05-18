@@ -20,7 +20,11 @@ CHAT-FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
 JOIN-FORMATTING: "**$PLAYER_NAME** joined the game."
 #Formatting for leave message
 LEAVE-FORMATTING: "**$PLAYER_NAME** left the game."
-#Formatting for shutdown message (NotWorking)
-SHUTDOWN-FORMATTING: "Shutting down server."
-#Formatting for startup message (NotWorking)
-STARTUP-FORMATTING: "Server started"
+#Formatting for shutdown message
+SHUTDOWN-FORMATTING: "**Shutting down server.**"
+#Formatting for startup message
+STARTUP-FORMATTING: "**Server started.**"
+
+#Any Questions about this plugin , want to suggest a feature or need help?
+#Join my discord server https://discord.gg/geNRqMu5XW and ping me(PugzAreCute#4636) in any #general
+#I will help you as soon as I have time :)
