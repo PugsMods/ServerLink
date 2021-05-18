@@ -1,2 +1,51 @@
 # ServerLink
 Link your minecraft server's chat with your discord server!
+
+#How to setup this plugin
+###Hey, you should probably read this
+
+##Step 1: Obtaining a bot token
+First head to [Discord Developer Portal](https://discord.com/developers/applications) And log in/create a new account.
+
+Then, Click on that big blue button in the top-right corner of your screen(Next to your profile picture). Refer to image 1.1 If you need help
+####IMAGE 1.1
+![Image 1.1](images/1.1.png)
+
+Note: You probably won't have any applications
+
+After that, enter a really cool name in the window that pops up. Refer to image 1.2 if you need help.
+####IMAGE 1.2
+![Image 1.2](images/1.2.png)
+
+Note: It probably wont ask you for a team, if it asks you, select "Personal"
+
+Then click the big blue button that says "Create"
+
+Now click "Bot" on the list in the left-hand side of your screen. If you need help refer to image 1.3
+####IMAGE 1.3
+![Image 1.3](images/1.3.png)
+
+Now click on Add Bot. If you need help refer to image 1.4
+###IMAGE 1.4
+![Image 1.4](images/1.4.png)
+
+Click "Yes, do it!" in the confirmation window. If you need help refer to image 1.5
+
+####IMAGE 1.5
+![Image 1.5](images/1.5.png)
+
+Now, Change the profile picture and username to your liking.
+
+Also, disable "Public Bot", as adding the bot in more than one server will break the plugin. If you need help refer to image 1.6
+
+####IMAGE 1.6
+![Image 1.6](images/1.6.png)
+Note: Click on the slider underlined in image 1.6, it should be gray
+
+After you are done, click on the "Copy" button below Token. If you need help please refer to image 1.7
+
+####IMAGE 1.7
+![Image 1.7](images/1.7.png)
+Now the token should be copied in your clipboard
+##NOTE: Do NOT Share your token with anyone
+Keep the token aside for some time, we will use it later
