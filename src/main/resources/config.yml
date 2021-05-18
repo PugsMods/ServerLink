@@ -7,8 +7,16 @@ CHANNEL-FIND-MODE: "string"
 #Post messages in the discord chat into the minecraft server
 DO-TWO-WAY-CHAT: false
 #Custom Message Formatting!
-FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
+CHAT-FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
 #Post a message when player joins
 POST-JOIN-MESSAGE: true
 #Post a message when player leaves
 POST-LEAVE-MESSAGE: true
+#Post a message on server startup (Notworking)
+POST-SERVER-STARTUP-MESSAGE: true
+#Post a message on server shutdown (Notworking)
+POST-SERVER-SHUTDOWN-MESSAGE: true
+#Formatting for join message
+JOIN-FORMATTING: "**$PLAYER_NAME** joined the game."
+#Formatting for leave message
+LEAVE-FORMATTING: "**$PLAYER_NAME** left the game."
