@@ -10,8 +10,13 @@ import org.jetbrains.annotations.NotNull;
 public class TwoWayChatListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-        if(event.getChannel().getName().equals(ServerLinkEvents.plugin.getConfig().getString("CHANNEL")) && !event.getMessage().getAuthor().isBot()){
+        if(ServerLinkEvents.plugin.getConfig().getString("CHANNEL-FIND-MODE").equalsIgnoreCase("id")){
+        if(!event.getMessage().getAuthor().isBot() && event.getChannel().getId().equals(ServerLinkEvents.plugin.getConfig().getString("CHANNEL"))){
             Bukkit.broadcastMessage(event.getAuthor().getName()+": "+event.getMessage().getContentDisplay());
+        }}else {
+            if(event.getChannel().getName().equals(ServerLinkEvents.plugin.getConfig().getString("CHANNEL")) && !event.getMessage().getAuthor().isBot()){
+                Bukkit.broadcastMessage(event.getAuthor().getName()+": "+event.getMessage().getContentDisplay());
+            }
         }
     }
 }
