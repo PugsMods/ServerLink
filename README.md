@@ -21,6 +21,8 @@ Note: It probably wont ask you for a team, if it asks you, select "Personal"
 
 Then click the big blue button that says "Create"
 
+Now in this screen copy the application id, we will need it later
+
 Now click "Bot" on the list in the left-hand side of your screen. If you need help refer to image 1.3
 ####IMAGE 1.3
 ![Image 1.3](images/1.3.png)

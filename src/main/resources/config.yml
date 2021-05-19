@@ -5,7 +5,7 @@ CHANNEL: "CHANNEL"
 #How to find the channel, 2 options are available - id, string, in id mode, you put the channels id in the CHANNEL field, in string mode, you put the channel name, with exact capitalization and without the #
 CHANNEL-FIND-MODE: "string"
 #Post messages in the discord chat into the minecraft server
-DO-TWO-WAY-CHAT: false
+DO-TWO-WAY-CHAT: true
 #Post a message when player joins
 POST-JOIN-MESSAGE: true
 #Post a message when player leaves
@@ -26,5 +26,5 @@ SHUTDOWN-FORMATTING: "**Shutting down server.**"
 STARTUP-FORMATTING: "**Server started.**"
 
 #Any Questions about this plugin , want to suggest a feature or need help?
-#Join my discord server https://discord.gg/geNRqMu5XW and ping me(PugzAreCute#4636) in any #general
+#Join my discord server https://discord.gg/geNRqMu5XW and ping me(PugzAreCute#4636) in #general
 #I will help you as soon as I have time :)
