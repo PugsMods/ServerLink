@@ -14,6 +14,10 @@ POST-LEAVE-MESSAGE: true
 POST-SERVER-STARTUP-MESSAGE: true
 #Post a message on server shutdown
 POST-SERVER-SHUTDOWN-MESSAGE: true
+#Post a message if player earns advancement (Not working)
+POST-ADVANCEMENT-EARN-MESSAGE: true
+#Formatting for advancements (Not working)
+ADVANCEMENT-FORMATTING: "**$PLAYER_NAME** achieved advancement: $ADVANCEMENT_NAME"
 #Formatting for chat message
 CHAT-FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
 #Formatting for join message
