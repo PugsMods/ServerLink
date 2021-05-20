@@ -31,6 +31,6 @@ public class JDABot {
     }
 
     public static void smg(String message) {
-        chnl.sendMessage(message).queue();
+        message = message.replaceAll("\\\\","/");chnl.sendMessage(message).queue();
     }
 }
