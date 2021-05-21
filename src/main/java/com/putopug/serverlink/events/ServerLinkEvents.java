@@ -58,6 +58,7 @@ public class ServerLinkEvents implements Listener {
     }
     @EventHandler
     public static void PlayerEarnAdvancement(PlayerAdvancementDoneEvent event){
+        if(plugin.getConfig().getBoolean("POST-ADVANCEMENT-EARN-MESSAGE")){
         String sendStr = plugin.getConfig().getString("ADVANCEMENT-FORMATTING");
         if(sendStr != null){
             sendStr = sendStr.replaceAll("\\$PLAYER_NAME",event.getPlayer().getDisplayName()).replaceAll("\\$ADVANCEMENT_NAME",event.getAdvancement().getKey().getKey());
@@ -66,5 +67,6 @@ public class ServerLinkEvents implements Listener {
             Bukkit.getLogger().warning("[ServerLink] WARNING: ADVANCEMENT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
             JDABot.smg("**"+event.getPlayer().getDisplayName()+"**"+" achieved advancement: "+event.getAdvancement().getKey().getKey());
         }
+    }
     }
 }
