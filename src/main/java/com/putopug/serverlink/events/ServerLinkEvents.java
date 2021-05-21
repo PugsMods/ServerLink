@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -53,6 +54,17 @@ public class ServerLinkEvents implements Listener {
                 Bukkit.getLogger().warning("[ServerLink] WARNING: LEAVE-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
                 JDABot.smg("**"+player.getDisplayName()+"** left the game.");
             }
+        }
+    }
+    @EventHandler
+    public static void PlayerEarnAdvancement(PlayerAdvancementDoneEvent event){
+        String sendStr = plugin.getConfig().getString("ADVANCEMENT-FORMATTING");
+        if(sendStr != null){
+            sendStr = sendStr.replaceAll("\\$PLAYER_NAME",event.getPlayer().getDisplayName()).replaceAll("\\$ADVANCEMENT_NAME",event.getAdvancement().getKey().getKey());
+            JDABot.smg(sendStr);
+        }else{
+            Bukkit.getLogger().warning("[ServerLink] WARNING: ADVANCEMENT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
+            JDABot.smg("**"+event.getPlayer().getDisplayName()+"**"+" achieved advancement: "+event.getAdvancement().getKey().getKey());
         }
     }
 }
