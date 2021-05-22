@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
@@ -68,5 +69,11 @@ public class ServerLinkEvents implements Listener {
             JDABot.smg("**"+event.getPlayer().getDisplayName()+"**"+" achieved advancement: "+event.getAdvancement().getKey().getKey());
         }
     }
+    }
+    @EventHandler
+    public static void playerDieEvent(PlayerDeathEvent event){
+        if(plugin.getConfig().getBoolean("POST-PLAYER-DEATH-MESSAGE")){
+            JDABot.smg(event.getDeathMessage());
+        }
     }
 }
