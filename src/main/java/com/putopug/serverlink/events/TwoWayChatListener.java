@@ -10,9 +10,6 @@ public class TwoWayChatListener extends ListenerAdapter {
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         if (ServerLinkEvents.plugin.getConfig().getString("CHANNEL-FIND-MODE").equalsIgnoreCase("id")) {
             if (!event.getMessage().getAuthor().isBot() && event.getChannel().getId().equals(ServerLinkEvents.plugin.getConfig().getString("CHANNEL"))) {
-                Bukkit.broadcastMessage(event.getAuthor().getName() + ": " + event.getMessage().getContentDisplay());
-            }
-            if (!event.getMessage().getAuthor().isBot() && event.getChannel().getId().equals(ServerLinkEvents.plugin.getConfig().getString("CHANNEL"))) {
                 if (ServerLinkEvents.plugin.getConfig().getBoolean("USE-NICKS-IN-2-WAY-CHAT")) {
                     if (event.getGuild().getMemberById(event.getAuthor().getId()).getNickname() != null) {
                         Bukkit.broadcastMessage(event.getGuild().getMemberById(event.getAuthor().getId()).getNickname() + ": " + event.getMessage().getContentDisplay());
