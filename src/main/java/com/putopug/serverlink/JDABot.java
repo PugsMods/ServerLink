@@ -1,6 +1,7 @@
 package com.putopug.serverlink;
 
 import com.putopug.serverlink.events.ServerLinkEvents;
+import com.putopug.serverlink.events.TwoWayChatListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.TextChannel;

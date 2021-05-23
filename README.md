@@ -1,6 +1,15 @@
 # ServerLink
 Link your minecraft server's chat with your discord server!
 
+# Fixes for common issues:
+Q: Messages from the 2 way chat feature repeats 2 times
+
+A: Your config is probably outdated, please regenerate your config by deleting the config.yml found in plugins/ServerLink/config.yml and run the server. now the latest version of the config should be generated, now you may reconfigure SL.
+
+Q: My question is not on this list
+
+A: Ping me(PugzAreCute#4636) in my [discord server](https://discord.gg/geNRqMu5XW) in the #general channel, I will help you in some time. Please note: Be patient, I am a human and I need to sleep. So I may take time to respond
+
 # How to setup this plugin
 
 ### Hey, you should probably read this

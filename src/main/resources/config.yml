@@ -18,6 +18,8 @@ POST-SERVER-SHUTDOWN-MESSAGE: true
 POST-ADVANCEMENT-EARN-MESSAGE: true
 #Post a message when player dies
 POST-PLAYER-DEATH-MESSAGE: true
+#Wheather or not to use nicknames in 2 way chat
+USE-NICKS-IN-2-WAY-CHAT: false
 #Formatting for advancements
 ADVANCEMENT-FORMATTING: "**$PLAYER_NAME** achieved advancement: $ADVANCEMENT_NAME"
 #Formatting for chat message
