@@ -1,5 +1,5 @@
 name: ServerLink
-version: 1.0.3
+version: 1.0.4
 main: com.putopug.serverlink.ServerLink
 api-version: 1.16
 prefix: ServerLink

@@ -20,6 +20,12 @@ POST-ADVANCEMENT-EARN-MESSAGE: true
 POST-PLAYER-DEATH-MESSAGE: true
 #Wheather or not to use nicknames in 2 way chat
 USE-NICKS-IN-2-WAY-CHAT: false
+#Use multiple channels to post/recieve messages from
+#Please note that this may be less performant
+MULTICHANNEL-MODE: false
+#Channels for MULTICHANNEL Posting
+#Please note the channel in the CHANNEL field will be ignored
+MULTICHANNEL-CHANNELS: ["id1","id2","id3","you can go on an on with the number of channels"]
 #Formatting for advancements
 ADVANCEMENT-FORMATTING: "**$PLAYER_NAME** achieved advancement: $ADVANCEMENT_NAME"
 #Formatting for chat message
