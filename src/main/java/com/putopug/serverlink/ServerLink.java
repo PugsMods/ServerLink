@@ -26,6 +26,7 @@ public final class ServerLink extends JavaPlugin {
             }
         }
     }
+
     @Override
     public void onDisable() {
         if (this.getConfig().getBoolean("POST-SERVER-SHUTDOWN-MESSAGE")) {

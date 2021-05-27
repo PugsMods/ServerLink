@@ -13,10 +13,6 @@ public class JDABot {
     static TextChannel chnl;
     static JDA jda;
 
-    public static void main(String[] args) throws LoginException, InterruptedException {
-        init();
-    }
-
     public static void init()
             throws LoginException, InterruptedException {
         jda = JDABuilder.createDefault(ServerLinkEvents.plugin.getConfig().getString("TOKEN")).addEventListeners(new TwoWayChatListener()).build();
@@ -33,11 +29,13 @@ public class JDABot {
     }
 
     public static void smg(String message) {
-        message = message.replaceAll("\\\\","/");chnl.sendMessage(message).queue();
-        if(ServerLinkEvents.plugin.getConfig().getBoolean("MULTICHANNEL-MODE")){
-            for (Object x: ServerLinkEvents.plugin.getConfig().getList("MULTICHANNEL-CHANNELS")) {
+        message = message.replaceAll("\\\\", "/");
+        chnl.sendMessage(message).queue();
+        if (ServerLinkEvents.plugin.getConfig().getBoolean("MULTICHANNEL-MODE")) {
+            for (Object x : ServerLinkEvents.plugin.getConfig().getList("MULTICHANNEL-CHANNELS")) {
                 TextChannel textChannel = jda.getTextChannelById(x.toString());
-                message = message.replaceAll("\\\\","/");textChannel.sendMessage(message).queue();
+                message = message.replaceAll("\\\\", "/");
+                textChannel.sendMessage(message).queue();
             }
         }
     }

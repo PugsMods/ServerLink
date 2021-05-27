@@ -1,13 +1,9 @@
 package com.putopug.serverlink.events;
 
-import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
 
 public class TwoWayChatListener extends ListenerAdapter {
     @Override
