@@ -24,7 +24,7 @@ USE-NICKS-IN-2-WAY-CHAT: false
 #Please note that this may be less performant
 MULTICHANNEL-MODE: false
 #Channels for MULTICHANNEL Posting
-#Please note the channel in the CHANNEL field will be ignored
+#Please note the channel in the CHANNEL field will not be ignored
 MULTICHANNEL-CHANNELS: ["id1","id2","id3","you can go on an on with the number of channels"]
 #Formatting for advancements
 ADVANCEMENT-FORMATTING: "**$PLAYER_NAME** achieved advancement: $ADVANCEMENT_NAME"
