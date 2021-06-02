@@ -37,5 +37,6 @@ public final class ServerLink extends JavaPlugin {
                 JDABot.smg("**Shutting down server.**");
             }
         }
+        JDABot.jda.shutdown();
     }
 }
