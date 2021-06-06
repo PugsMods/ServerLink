@@ -1,12 +1,16 @@
 package com.putopug.serverlink;
 
+import com.google.common.collect.ImmutableSet;
 import com.putopug.serverlink.events.ServerLinkEvents;
 import com.putopug.serverlink.events.TwoWayChatListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 
 import javax.security.auth.login.LoginException;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Objects;
 
 public class JDABot {
@@ -30,12 +34,12 @@ public class JDABot {
 
     public static void smg(String message) {
         message = message.replaceAll("\\\\", "/");
-        chnl.sendMessage(message).queue();
+        chnl.sendMessage(message).allowedMentions(Collections.emptySet()).queue();
         if (ServerLinkEvents.plugin.getConfig().getBoolean("MULTICHANNEL-MODE")) {
             for (Object x : ServerLinkEvents.plugin.getConfig().getList("MULTICHANNEL-CHANNELS")) {
                 TextChannel textChannel = jda.getTextChannelById(x.toString());
                 message = message.replaceAll("\\\\", "/");
-                textChannel.sendMessage(message).queue();
+                textChannel.sendMessage(message).allowedMentions(Collections.emptySet()).queue();
             }
         }
     }
