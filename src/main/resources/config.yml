@@ -20,7 +20,7 @@ POST-ADVANCEMENT-EARN-MESSAGE: true
 POST-PLAYER-DEATH-MESSAGE: true
 #Wheather or not to use nicknames in 2 way chat
 USE-NICKS-IN-2-WAY-CHAT: false
-#Use multiple channels to post/recieve messages from
+#Use multiple channels to post/receive messages from
 #Please note that this may be less performant
 MULTICHANNEL-MODE: false
 #Channels for MULTICHANNEL Posting
