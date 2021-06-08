@@ -26,8 +26,6 @@ MULTICHANNEL-MODE: false
 #Channels for MULTICHANNEL Posting
 #Please note the channel in the CHANNEL field will not be ignored
 MULTICHANNEL-CHANNELS: ["id1","id2","id3","you can go on an on with the number of channels"]
-#Formatting for advancements
-ADVANCEMENT-FORMATTING: "**$PLAYER_NAME** achieved advancement: $ADVANCEMENT_NAME"
 #Formatting for chat message
 CHAT-FORMATTING: "**$PLAYER_NAME**: $PLAYER_MESSAGE"
 #Formatting for join message
