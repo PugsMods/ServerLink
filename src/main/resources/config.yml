@@ -4,6 +4,8 @@ TOKEN: "TOKEN"
 CHANNEL: "CHANNEL"
 #How to find the channel, 2 options are available - id, string, in id mode, you put the channels id in the CHANNEL field, in string mode, you put the channel name, with exact capitalization and without the #
 CHANNEL-FIND-MODE: "string"
+#Remove color codes (In servers with colored names if this is false it'll look messy)
+REMOVE-COLOR-CODES: true
 #Post messages in the discord chat into the minecraft server
 DO-TWO-WAY-CHAT: true
 #Post a message when player joins
