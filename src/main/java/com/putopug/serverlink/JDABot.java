@@ -34,6 +34,9 @@ public class JDABot {
 
     public static void smg(String message) {
         message = message.replaceAll("\\\\", "/");
+        if(ServerLinkEvents.plugin.getConfig().getBoolean("REMOVE-COLOR-CODES")) {
+            message = message.replaceAll("§.","");
+        }
         chnl.sendMessage(message).allowedMentions(Collections.emptySet()).queue();
         if (ServerLinkEvents.plugin.getConfig().getBoolean("MULTICHANNEL-MODE")) {
             for (Object x : ServerLinkEvents.plugin.getConfig().getList("MULTICHANNEL-CHANNELS")) {
