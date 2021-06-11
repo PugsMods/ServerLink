@@ -16,4 +16,9 @@ public class DataEngine {
         }
         }
     }
+
+    public static void addUserToBanList(String entry_type,String id,String platform){
+        String banstr = "{\"entry_type\":\""+entry_type+"\", \"id\": \""+id+"\",\"platform\":\""+platform+"\"}";
+        System.out.println(banstr);
+    }
 }
