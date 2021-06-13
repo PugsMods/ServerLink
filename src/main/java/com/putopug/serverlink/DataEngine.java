@@ -19,12 +19,22 @@ public class DataEngine {
         }
     }
 
+    public static void main(String[] args) {
+        try {
+            addUserToBanList("black","e666037e-8185-4b39-ad99-85b561e7608e"," mc");
+            addUserToBanList("black","e666037e-8185-4b39-ad99-85b561e7608e"," mc");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    static Gson gson = new Gson();
+    static List banlist = new List();
     public static void addUserToBanList(String entry_type,String id,String platform) throws FileNotFoundException {
-        Gson gson = new Gson();
-        List banlist = new List();
-        banlist.getPerms().put("ENTRY_001", new UserPermissions());
-        String banstr = "{\"entry_type\":\""+entry_type+"\", \"id\": \""+id+"\",\"platform\":\""+platform+"\"}";
-        System.out.println(gson.toJson(banlist));
-        //loadOrReloadConfig();
+        UserPermissions prms = new UserPermissions();
+        prms.setEntryType(entry_type);
+        prms.setId(id);
+        prms.setPlatform(platform);
+        banlist.getPerms().add(prms);
+        loadOrReloadConfig();
     }
 }

@@ -1,11 +1,12 @@
 package com.putopug.serverlink;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class List {
-    private Map<String,UserPermissions> perms;
+    private ArrayList<UserPermissions> perms = new ArrayList<>();
 
-    public Map<String, UserPermissions> getPerms() {
+    public ArrayList<UserPermissions> getPerms() {
         return perms;
     }
 }
