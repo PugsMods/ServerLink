@@ -3,6 +3,7 @@ package com.putopug.serverlink.events;
 import com.putopug.serverlink.DataEngine;
 import com.putopug.serverlink.JDABot;
 import com.putopug.serverlink.ServerLink;
+import com.putopug.serverlink.UserPermissions;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -24,13 +25,16 @@ public class ServerLinkEvents implements Listener {
     public static void PlayerChatEvent(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String sendStr = plugin.getConfig().getString("CHAT-FORMATTING");
-        if(DataEngine.banlist.getPerms().get())
-        if (sendStr != null) {
-            sendStr = sendStr.replaceAll("\\$PLAYER_NAME", event.getPlayer().getDisplayName()).replaceAll("\\$PLAYER_MESSAGE", event.getMessage());
-            JDABot.smg(sendStr);
-        } else {
-            Bukkit.getLogger().warning("[ServerLink] WARNING: CHAT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
-            JDABot.smg("**" + player.getDisplayName() + "**: " + event.getMessage());
+        for (UserPermissions x:DataEngine.banlist.getPerms()) {
+            if(!x.getId().equals(event.getPlayer().getUniqueId().toString())){
+                if (sendStr != null) {
+                    sendStr = sendStr.replaceAll("\\$PLAYER_NAME", event.getPlayer().getDisplayName()).replaceAll("\\$PLAYER_MESSAGE", event.getMessage());
+                    JDABot.smg(sendStr);
+                } else {
+                    Bukkit.getLogger().warning("[ServerLink] WARNING: CHAT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
+                    JDABot.smg("**" + player.getDisplayName() + "**: " + event.getMessage());
+                }
+            }
         }
     }
 
