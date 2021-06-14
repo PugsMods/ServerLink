@@ -7,9 +7,11 @@ import java.io.*;
 import java.util.Scanner;
 
 public class DataEngine {
+    public static List banlist;
+    public static File list;
     public static void loadOrReloadConfig() throws FileNotFoundException {
-        File list = new File(ServerLinkEvents.plugin.getDataFolder()+File.separator+"UserPermissionList.json");
-        List banlist = new Gson().fromJson(new BufferedReader(new FileReader(ServerLinkEvents.plugin.getDataFolder()+File.separator+"UserPermissionList.json")),List.class);
+        list = new File(ServerLinkEvents.plugin.getDataFolder()+File.separator+"UserPermissionList.json");
+        banlist= new Gson().fromJson(new BufferedReader(new FileReader(ServerLinkEvents.plugin.getDataFolder()+File.separator+"UserPermissionList.json")),List.class);
         if(!list.exists()) {
         try {
             list.createNewFile();
@@ -20,14 +22,15 @@ public class DataEngine {
     }
 
     static Gson gson = new Gson();
-    static List banlist = new List();
-    public static void addUserToBanList(String entry_type,String id,String platform) throws FileNotFoundException {
+    static List banlistSer = new List();
+    public static void addUserToBanList(String entry_type,String id,String platform) throws Exception {
         UserPermissions prms = new UserPermissions();
         prms.setEntryType(entry_type);
         prms.setId(id);
         prms.setPlatform(platform);
-        banlist.getPerms().add(prms);
-        System.out.println(gson.toJson(banlist));
-        //loadOrReloadConfig();
+        banlistSer.getPerms().add(prms);
+        FileWriter writer = new FileWriter(list,false);
+        writer.write(gson.toJson(banlistSer));
+        loadOrReloadConfig();
     }
 }

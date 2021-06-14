@@ -1,5 +1,6 @@
 package com.putopug.serverlink.events;
 
+import com.putopug.serverlink.DataEngine;
 import com.putopug.serverlink.JDABot;
 import com.putopug.serverlink.ServerLink;
 import org.bukkit.Bukkit;
@@ -23,6 +24,7 @@ public class ServerLinkEvents implements Listener {
     public static void PlayerChatEvent(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String sendStr = plugin.getConfig().getString("CHAT-FORMATTING");
+        if(DataEngine.banlist.getPerms().get())
         if (sendStr != null) {
             sendStr = sendStr.replaceAll("\\$PLAYER_NAME", event.getPlayer().getDisplayName()).replaceAll("\\$PLAYER_MESSAGE", event.getMessage());
             JDABot.smg(sendStr);

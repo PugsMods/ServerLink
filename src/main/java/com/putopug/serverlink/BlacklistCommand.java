@@ -15,7 +15,7 @@ public class BlacklistCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         try {
             DataEngine.addUserToBanList("blacklist",ServerLinkEvents.plugin.getServer().getPlayer(args[0]).getUniqueId().toString(),"minecraft");
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return true;
