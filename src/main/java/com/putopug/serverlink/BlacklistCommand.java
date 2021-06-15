@@ -13,11 +13,7 @@ import java.io.IOException;
 public class BlacklistCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        try {
-            DataEngine.addUserToBanList("blacklist",ServerLinkEvents.plugin.getServer().getPlayer(args[0]).getUniqueId().toString(),"minecraft");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
         return true;
     }
 }

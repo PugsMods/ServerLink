@@ -32,8 +32,6 @@ dependencies {
     compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
     implementation( "net.dv8tion:JDA:4.2.1_253")
     shade ( "net.dv8tion:JDA:4.2.1_253")
-    implementation 'com.google.code.gson:gson:2.8.6'
-    shade("com.google.code.gson:gson:2.8.6")
 }
 shadowJar {
     classifier = ''
