@@ -22,15 +22,15 @@ public class ServerLinkEvents implements Listener {
     @EventHandler
     public static void PlayerChatEvent(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
-        if(player.hasPermission("serverlink.blacklist")) return;
+        if (player.hasPermission("serverlink.blacklist")) return;
         String sendStr = plugin.getConfig().getString("CHAT-FORMATTING");
-                if (sendStr != null) {
-                    sendStr = sendStr.replaceAll("\\$PLAYER_NAME", event.getPlayer().getDisplayName()).replaceAll("\\$PLAYER_MESSAGE", event.getMessage());
-                    JDABot.smg(sendStr);
-                } else {
-                    Bukkit.getLogger().warning("[ServerLink] WARNING: CHAT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
-                    JDABot.smg("**" + player.getDisplayName() + "**: " + event.getMessage());
-                }
+        if (sendStr != null) {
+            sendStr = sendStr.replaceAll("\\$PLAYER_NAME", event.getPlayer().getDisplayName()).replaceAll("\\$PLAYER_MESSAGE", event.getMessage());
+            JDABot.smg(sendStr);
+        } else {
+            Bukkit.getLogger().warning("[ServerLink] WARNING: CHAT-FORMATTING In config.yml is null, falling back to hardcoded fallback message.");
+            JDABot.smg("**" + player.getDisplayName() + "**: " + event.getMessage());
+        }
     }
 
     @EventHandler
