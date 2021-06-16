@@ -1,8 +1,6 @@
 plugins {
     id 'java'
-    id "com.github.johnrengelman.shadow" version "7.0.0"
 }
-apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'com.putopug'
 version = '1.0.6'
@@ -27,9 +25,4 @@ configurations {
 dependencies {
     compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
     implementation( "net.dv8tion:JDA:4.2.1_253")
-    shade ( "net.dv8tion:JDA:4.2.1_253")
-}
-shadowJar {
-    classifier = ''
-    configurations = [project.configurations.shade]
 }
