@@ -10,7 +10,7 @@ Q: My question is not on this list
 
 A: Ping me(PugzAreCute#4636) in my [discord server](https://discord.gg/geNRqMu5XW) in the #general channel, I will help you in some time. Please note: Be patient, I am a human and I need to sleep. So I may take time to respond
 
-# How to setup this plugin
+# How to setup this plugin (Im too lazy to complete this so contact me in my discord)
 
 ### Hey, you should probably read this
 
