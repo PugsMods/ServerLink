@@ -6,3 +6,7 @@ prefix: ServerLink
 authors: [ PugzAreCute_ ]
 description: Link your minecraft server's chat with your discord server
 website: https://dev.bukkit.org/projects/serverlink
+permissions:
+  serverlink.blacklist:
+    default: false
+    description: Prevent messages from users with this node from being sent to the discord channel.
