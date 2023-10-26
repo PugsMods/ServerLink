@@ -65,14 +65,20 @@ Also, disable "Public Bot", as adding the bot in more than one server will break
 
 Note: Click on the slider underlined in image 1.6, it should be gray
 
-After you are done, click on the "Copy" button below Token. If you need help please refer to image 1.7
-
 #### IMAGE 1.7
 
-![Image 1.7](https://i.imgur.com/ne82qkV.png)
+![Image 1.7](https://i.imgur.com/GwfSNi9.png)
+
+Click on "Message Content Intent" to enable it. Without this, the bot can not access message content.
+
+After you are done, click on the "Copy" button below Token. If you need help please refer to image 1.8
+
+#### IMAGE 1.8
+
+![Image 1.8](https://i.imgur.com/ne82qkV.png)
 
 Now the token should be copied in your clipboard
 
 ## NOTE: Do NOT Share your token with anyone
 
-Keep the token aside for some time, we will use it later
+Use the token in the config
